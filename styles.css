@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0
+}
+
+.background{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(background2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+#overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#overlay-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    height: 64%;
+}
+
+#map{
+    width: 90%;
+    margin: auto;
+    padding: 20px 0
+}
+
+#map iframe{
+    width: 100%
+}
+

@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-</head>
-<body>
-  
-  <iframe width= "100%" height= "640px" src="https://clausa.app.carto.com/map/d2906c27-10c6-4be8-9c61-df355db5bfc1"  frameborder="0" ></iframe>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado Resource Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!--Section that allows the image background in the styles.css file.-->
+    <section class = "background">
+      <!--Div for overlay that displays on the screen upon page load.-->
+      <div id="overlay">
+        <div id="overlay-content">
+            <h1>Colorado Resource Viewer</h1>
+            <br>
+            <p>The Colorado Resource Viewer Application is an application intended for scientists, analysts, surveyors, land managers, etc. The primary purpose of this application is to examine the various datasets to get an understanding of the current resource extraction landscape of Colorado.</p>
+            <br>
+            <p>The right panel of the application contains the widgets that accompany each layer. They will open and close when layers are selected in the layer selector to the left of the widget panel. Each widget summarizes some of the basic information to be learned about each resource type.</p>
+            <br>
+            <p>Each layer can be turned on and off using the layer selector, and if a polygon or point feature is clicked, a popup will display relevant information.</p>
+            <br>
+            <p>Click anywhere to continue.</p>
+        </div>
+      </div>  
+       
+      <!--Div for the embedded carto map.-->
+      <div id="map">
+        <iframe width= "100%" height= "740px" src="https://clausa.app.carto.com/map/d2906c27-10c6-4be8-9c61-df355db5bfc1"  frameborder="0" ></iframe>
+      </div>
 
-</body>
-<script>
+      <script>
+        // Display the overlay when the page is loaded
+        window.onload = function () {
+          var overlay = document.getElementById('overlay');
+          overlay.style.display = 'flex';
+        };
 
-</script>
-</html> 
+        // Hide the overlay when the user clicks anywhere on the page
+        document.addEventListener('click', function () {
+            var overlay = document.getElementById('overlay');
+            overlay.style.display = 'none';
+        });
+      </script>
+    </section>
+
+  </body>
+</html>
